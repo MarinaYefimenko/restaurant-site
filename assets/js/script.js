@@ -195,7 +195,7 @@ window.addEventListener('DOMContentLoaded', () => {
         let slideIndex = 1;
         let offset = 0;
 
-        sliderWrapper.style.width = 34 * slides.length + '%';
+        sliderWrapper.style.width = 25 * slides.length + '%';
         sliderWrapper.style.transition = '1s all';
 
         slider.style.overflow = 'hidden';
@@ -213,7 +213,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
 
         next.addEventListener('click', () => {
-            if (offset == transfToDigit(width) * (slides.length - 3)) {
+            if (offset == transfToDigit(width) * (slides.length - 4)) {
                 offset = 0;
             } else {
                 offset += transfToDigit(width);
@@ -229,7 +229,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         prev.addEventListener('click', () => {
             if (offset == 0) {
-                offset = transfToDigit(width) * (slides.length - 3);
+                offset = transfToDigit(width) * (slides.length - 4);
             } else {
                 offset -= transfToDigit(width);
             }

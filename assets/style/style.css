@@ -356,7 +356,7 @@ p {
     overflow: hidden;
     transition: all .3s linear; }
     .gallery__wrapper img {
-      width: 34%;
+      width: 25%;
       height: auto; }
 
 footer .footer__inner {
