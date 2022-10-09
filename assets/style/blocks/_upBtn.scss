@@ -1,0 +1,35 @@
+@import '../vars';
+
+.up__btn{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 15%;
+    z-index: 3;
+    font-size: 0;
+    color: transparent;
+    background-color: $white;
+    border-radius: 3px;
+    opacity: 0.6;
+    padding: 20px;
+    transition: all .1s linear;
+    
+    &:after{
+        content:"";
+        display: block;
+        width: 16px;
+        height: 16px;
+        border-top: 3px solid $pink;
+        border-left: 3px solid $pink;
+        transform: rotate(45deg);
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.show{
+    display: block;
+    cursor: pointer;
+}

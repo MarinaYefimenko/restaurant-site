@@ -1,0 +1,54 @@
+@import './vars';
+
+.story {
+    background-color: $red;
+
+    &__inner {
+        display: flex;
+
+        @media($phonesmall) {
+            display: block;
+        }
+
+    }
+
+    img {
+        height: 400px;
+        width: auto;
+        margin: 120px 0;
+
+        @media($tablet) {
+            margin: 80px 0;
+            height: 300px;
+        }
+
+        @media($phone) {
+            height: 200px;
+        }
+
+        @media($phonesmall) {
+            display: block;
+            margin: 0 auto;
+            padding: 20px;
+            height: 300px;
+        }
+    }
+
+    &__content {
+        text-align: center;
+        margin: auto 70px;
+
+        @media($phone) {
+            padding: 40px 0;
+            margin: 0 20px;
+        }
+
+        @media($phonesmall) {
+            padding-top: 20px;
+        }
+    }
+
+    &__header:after {
+        background-color: $white;
+    }
+}

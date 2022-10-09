@@ -1,0 +1,46 @@
+@import 'vars';
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: $white;
+    background-color: $grey-violet;
+    font-family: $fontmain;
+    font-size: 16px;
+    line-height: 1;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1180px;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    @media($tablet){
+        padding: 0 25px;
+    }
+}
+
+// Blocks
+@import 'blocks/header';
+@import 'blocks/intro';
+@import 'blocks/sectionheader&p';
+@import 'blocks/story';
+@import 'blocks/receipts';
+@import 'blocks/menu';
+@import 'blocks/slider';
+@import 'blocks/footer';
+@import 'blocks/upBtn';
+@import 'blocks/modal';
+@import 'blocks/spinner';

@@ -1,0 +1,93 @@
+@import './vars';
+
+.menu {
+    background: $white;
+    color: $grey-dark;
+
+    &__head {
+        padding: {
+            top: 120px;
+            bottom: 100px;
+        }
+
+        text-align: center;
+
+        @media($tablet) {
+            padding: {
+                top: 80px;
+                bottom: 60px;
+            }
+        }
+
+        @media($phone) {
+            padding: {
+                top: 50px;
+                bottom: 30px;
+            }
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 60px;
+        width: 100%;
+
+        .menu__col {
+            width: 41%;
+
+            .menu__item {
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 60px;
+
+                .menu__name {
+                    font-weight: 700;
+                    width: 80%;
+                    text-transform: uppercase;
+                }
+
+                .menu__price {
+                    color: $pink;
+                    width: 20%;
+                    text-align: right;
+                }
+
+                .menu__desc {
+                    font: {
+                        weight: 400;
+                        size: 15px;
+                        family: $fontlogo;
+                    }
+
+                    margin-top: 20px;
+
+                    @media($phonesmall) {
+                        font-size: 14px;
+                    }
+                }
+
+                @media($phonesmall) {
+                    margin-bottom: 20px;
+                    font-size: 15px;
+                }
+            }
+
+            @media($phonesmall) {
+                width: 100%;
+            }
+        }
+
+        @media($tablet) {
+            padding-bottom: 25px;
+        }
+
+        @media($phone) {
+            padding-bottom: 0;
+        }
+
+        @media($phonesmall) {
+            flex-direction: column;
+        }
+    }
+}

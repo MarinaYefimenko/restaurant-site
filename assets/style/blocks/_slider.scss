@@ -1,0 +1,61 @@
+.gallery {
+    position: relative;
+    width: 100%;
+
+    .arrow {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        z-index: 3;
+        font-size: 0;
+        color: transparent;
+        background-color: $white;
+        border-radius: 3px;
+        opacity: 0.3;
+        padding: 20px;
+        transition: all .1s linear;
+        display: flex;
+        align-items: center;
+
+        &:after {
+            content: "";
+            display: block;
+            margin: auto;
+            width: 20px;
+            height: 20px;
+            border-top: 3px solid $grey-dark;
+            border-left: 3px solid $grey-dark;
+        }
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    .arrow-prew {
+        left: 0;
+
+        &:after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    .arrow-next {
+        right: 0;
+
+        &:after {
+            transform: rotate(135deg);
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        overflow: hidden;
+        transition: all .3s linear;
+
+        & img {
+            width: 34%;
+            height: auto;
+        }
+    }
+}
