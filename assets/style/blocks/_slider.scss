@@ -30,6 +30,14 @@
         &:hover {
             opacity: 0.5;
         }
+
+        @media($phone){
+            padding: 15px;
+        }
+
+        @media($phonesmall){
+            padding: 10px;
+        }
     }
 
     .arrow-prew {
@@ -54,8 +62,20 @@
         transition: all .3s linear;
 
         & img {
-            width: 25%;
+            width: 500px;
             height: auto;
+
+            @media($tablet){
+                width: 380px;
+            }
+
+            @media($phone){
+                width: 300px;
+            }
+
+            @media($phonesmall){
+                width: 240px;
+            }
         }
     }
 }

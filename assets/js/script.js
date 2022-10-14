@@ -195,14 +195,10 @@ window.addEventListener('DOMContentLoaded', () => {
         let slideIndex = 1;
         let offset = 0;
 
-        sliderWrapper.style.width = 25 * slides.length + '%';
+        sliderWrapper.style.width = transfToDigit(width) * slides.length + 'px';
         sliderWrapper.style.transition = '1s all';
 
         slider.style.overflow = 'hidden';
-
-        slides.forEach(slide => {
-            slide.style.width = width;
-        })
 
         function moveSlide() {
             sliderWrapper.style.transform = `translateX(-${offset}px)`;
@@ -213,7 +209,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
 
         next.addEventListener('click', () => {
-            if (offset == transfToDigit(width) * (slides.length - 4)) {
+            if (offset == transfToDigit(width) * (slides.length - 3)) {
                 offset = 0;
             } else {
                 offset += transfToDigit(width);
@@ -229,7 +225,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         prev.addEventListener('click', () => {
             if (offset == 0) {
-                offset = transfToDigit(width) * (slides.length - 4);
+                offset = transfToDigit(width) * (slides.length - 3);
             } else {
                 offset -= transfToDigit(width);
             }
@@ -247,5 +243,9 @@ window.addEventListener('DOMContentLoaded', () => {
     postRequest('.booking__form');
     toggleUpBtn('.up__btn', 'show');
     openBurgerMenu('.nav-toggle', '.nav', '.cross', '.nav__item a');
-    slider('.gallery', '.gallery__wrapper', '.gallery__wrapper img', '.arrow-prew', '.arrow-next')
+    slider('.gallery', '.gallery__wrapper', '.gallery__wrapper img', '.arrow-prew', '.arrow-next');
+
+    window.addEventListener("resize", function() {
+        slider('.gallery', '.gallery__wrapper', '.gallery__wrapper img', '.arrow-prew', '.arrow-next');
+    });
 })

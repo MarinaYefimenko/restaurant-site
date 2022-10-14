@@ -343,6 +343,12 @@ p {
       border-left: 3px solid #0e1015; }
     .gallery .arrow:hover {
       opacity: 0.5; }
+    @media (max-width: 770px) {
+      .gallery .arrow {
+        padding: 15px; } }
+    @media (max-width: 550px) {
+      .gallery .arrow {
+        padding: 10px; } }
   .gallery .arrow-prew {
     left: 0; }
     .gallery .arrow-prew:after {
@@ -356,8 +362,17 @@ p {
     overflow: hidden;
     transition: all .3s linear; }
     .gallery__wrapper img {
-      width: 25%;
+      width: 500px;
       height: auto; }
+      @media (max-width: 990px) {
+        .gallery__wrapper img {
+          width: 380px; } }
+      @media (max-width: 770px) {
+        .gallery__wrapper img {
+          width: 300px; } }
+      @media (max-width: 550px) {
+        .gallery__wrapper img {
+          width: 240px; } }
 
 footer .footer__inner {
   padding: 100px 0;
