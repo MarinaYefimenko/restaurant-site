@@ -239,11 +239,34 @@ window.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+    function navigation(linksSelector, pointsSelector) {
+        const links = document.querySelectorAll(linksSelector),
+            points = document.querySelectorAll(pointsSelector);
+            
+        function scrollTo(point) {
+            window.scroll({
+                left: 0,
+                top: point.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    
+        links.forEach((link, i) => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                scrollTo(points[i]);
+            })
+        });
+    
+    }
+        
+
     modal('.book', '.modal');
     postRequest('.booking__form');
     toggleUpBtn('.up__btn', 'show');
     openBurgerMenu('.nav-toggle', '.nav', '.cross', '.nav__item a');
     slider('.gallery', '.gallery__wrapper', '.gallery__wrapper img', '.arrow-prew', '.arrow-next');
+    navigation('.nav__item a', '.nav-point');
 
     window.addEventListener("resize", function() {
         slider('.gallery', '.gallery__wrapper', '.gallery__wrapper img', '.arrow-prew', '.arrow-next');
