@@ -1,0 +1,209 @@
+@use '../vars' as *;
+
+footer {
+    .footer__inner {
+        padding: 100px 0;
+        display: flex;
+        justify-content: space-between;
+
+        .footer__intro {
+            width: 50%;
+
+            &__head {
+                display: flex;
+                justify-content: start;
+
+                .logo {
+                    width: 50%;
+                    @include logo;
+                    margin: auto 0;
+                }
+
+                .book {
+                    margin-right: 25px;
+                    background-color: $red;
+                    border: none;
+                    border-radius: 3px;
+                    width: 150px;
+                    height: 50px;
+                    font-size: 18px;
+                    color: $white;
+                    cursor: pointer;
+                    transition: all .1s linear;
+
+                    &:hover {
+                        color: $red;
+                        background-color: $white;
+                    }
+
+                    @media($phone) {
+                        width: 120px;
+                        height: 40px;
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            & p {
+                font-size: 14px;
+                font-weight: 400;
+
+                @media($tablet) {
+                    font-size: 12px;
+                }
+
+                @media($phone) {
+                    padding-top: 10px;
+                }
+            }
+
+            @media($phone) {
+                width: 100%;
+                padding-bottom: 30px;
+            }
+        }
+
+        .footer__nav {
+            width: 45%;
+            display: flex;
+            justify-content: space-between;
+            padding-left: 50px;
+
+            &col {
+                width: 45%;
+
+                .contacts {
+                    width: 100%;
+
+                    &__head {
+                        font-size: 18px;
+                        padding-bottom: 15px;
+                        color: $pink;
+
+                        @media($tablet) {
+                            margin-top: 10px;
+                            padding-bottom: 46px;
+                        }
+
+                        @media($phone) {
+                            margin-top: 0px;
+                            padding-bottom: 10px;
+                        }
+
+                        @media($phonesmall) {
+                            font-size: 15px;
+                        }
+                    }
+
+                    &__inner {
+                        font-size: 14px;
+
+                        & div {
+                            padding: 10px 0;
+                        }
+
+                        a {
+                            color: $white;
+                            @include link;
+
+                            &:hover {
+                                color: $pink;
+                            }
+                        }
+
+                        & i {
+                            padding-right: 8px;
+                            font-size: 14px;
+                            color: $pink;
+                        }
+                    }
+
+                    @media($tablet) {
+                        width: 120%;
+                        margin-left: -30px;
+                    }
+
+                    @media($phonesmall) {
+                        width: 150%;
+                        margin-left: -50px;
+                    }
+                }
+            }
+
+            &__head {
+                font-size: 18px;
+                padding-bottom: 15px;
+                color: $pink;
+
+                @media($tablet) {
+                    margin-top: 10px;
+                    padding-bottom: 46px;
+                }
+
+                @media($phone) {
+                    margin-top: 0px;
+                    padding-bottom: 10px;
+                }
+
+                @media($phonesmall) {
+                    font-size: 15px;
+                }
+            }
+
+            &__links a {
+                display: block;
+                color: $white;
+                padding: 10px 0;
+                font-size: 14px;
+                font-weight: 400;
+                @include link;
+
+                &:hover {
+                    color: $pink;
+                }
+            }
+
+            @media($tablet) {
+                padding-left: 0;
+            }
+
+            @media($phone) {
+                width: 100%;
+            }
+        }
+
+        @media($tablet) {
+            padding: 70px 0;
+        }
+
+        @media($phone) {
+            padding: 40px 0;
+            flex-direction: column;
+        }
+
+        @media($phonesmall) {
+            // padding-top: 10px;
+        }
+    }
+
+    .copyright {
+        background-color: $grey-dark;
+        width: 100%;
+        padding: 15px 0;
+
+        .copyr__site a {
+            color: $white;
+            opacity: 0.5;
+            transition: all .1s linear;
+            @include link;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            @media($phone) {
+                font-size: 14px;
+            }
+        }
+    }
+}

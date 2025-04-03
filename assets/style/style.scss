@@ -1,0 +1,44 @@
+@use 'vars' as *;
+@use 'blocks/header' as *;
+@use 'blocks/intro' as *;
+@use 'blocks/section-header' as *;
+@use 'blocks/story' as *;
+@use 'blocks/receipts' as *;
+@use 'blocks/menu' as *;
+@use 'blocks/slider' as *;
+@use 'blocks/footer' as *;
+@use 'blocks/upBtn' as *;
+@use 'blocks/modal' as *;
+@use 'blocks/spinner' as *;
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: $white;
+    background-color: $grey-violet;
+    font-family: $fontmain;
+    font-size: 16px;
+    line-height: 1;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1180px;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    @media($tablet){
+        padding: 0 25px;
+    }
+}

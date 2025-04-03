@@ -1,0 +1,24 @@
+@use '../vars' as *;
+
+.receipts {
+    background: {
+        image: url(../img/receipts_bg.jpg);
+        size: cover;
+        repeat: no-repeat;
+    }
+
+    &__inner {
+        margin: 0 auto;
+        text-align: center;
+        max-width: 525px;
+        padding-top: 110px;
+        padding-bottom: 140px;
+
+        @media($tablet){
+            padding-top: 80px;
+            padding-bottom: 110px;
+        }
+    }
+
+
+}

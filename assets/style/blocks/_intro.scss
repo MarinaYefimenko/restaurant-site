@@ -1,0 +1,48 @@
+@use '../vars' as *;
+
+.intro {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 300px;
+    padding-bottom: 390px;
+
+    h1 {
+        text-transform: uppercase;
+        font-family: $fontlogo;
+        font-size: 72px;
+        font-weight: 500;
+        margin-bottom: 40px;
+
+        @media($tablet){
+            font-size: 60px;
+        }
+        @media($phone){
+            font-size: 46px;
+            margin-bottom: 10px;
+        }
+        @media($phonesmall){
+            font-size: 30px;
+        }
+    }
+
+    p {
+        max-width: 720px;
+        margin: auto;
+
+        @media($tablet){
+            max-width: 600px;
+        }
+        @media($phone){
+            max-width: 450px;
+        }
+    }
+
+    @media($tablet){
+        padding: 200px 0;
+    }
+
+    @media($phone){
+        padding-top: 100px;
+        padding-bottom: 150px;
+    }
+}

@@ -1,0 +1,46 @@
+$fontmain: 'Roboto', sans-serif;
+$fontlogo: 'Raleway', sans-serif;
+$fontheaders: 'Kaushan Script', cursive;
+
+$white: #fff;
+$red: #af1e1e;
+$pink: #e91e5f;
+
+$grey-violet: #1f2126;
+$grey-dark: #0e1015;
+$grey-light: #87888a;
+
+@mixin logo {
+    font: {
+        family: $fontlogo;
+        size: 31px;
+        weight: 400;
+    }
+
+    color: $white;
+    font-style: normal;
+}
+
+@mixin link {
+    text-decoration: none;
+    transition: all .1s linear;
+    cursor: pointer;
+}
+
+@mixin bookElements {
+    display: block;
+    margin: 20px auto;
+    width: 280px;
+    height: 40px;
+    box-shadow: 0 2px 12px $grey-light;
+    border: none;
+    font-size: 18px;
+    text-align: center;
+    padding: 0 20px;
+    outline: 0;
+}
+
+// Media
+$tablet: 'max-width: 990px';
+$phone: 'max-width: 770px';
+$phonesmall: 'max-width: 550px';
