@@ -42,3 +42,16 @@ body {
         padding: 0 25px;
     }
 }
+
+// Blocks
+@import 'blocks/header';
+@import 'blocks/intro';
+@import 'blocks/sectionheader&p';
+@import 'blocks/story';
+@import 'blocks/receipts';
+@import 'blocks/menu';
+@import 'blocks/slider';
+@import 'blocks/footer';
+@import 'blocks/upBtn';
+@import 'blocks/modal';
+@import 'blocks/spinner';

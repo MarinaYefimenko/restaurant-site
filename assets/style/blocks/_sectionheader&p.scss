@@ -1,0 +1,34 @@
+@import './vars';
+
+h2 {
+    font-family: $fontheaders;
+    font-weight: 400;
+    font-size: 56px;
+
+    &:after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 110px;
+        margin: 10px auto;
+        background-color: $pink;
+    }
+
+    @media($tablet){
+        font-size: 42px;
+    }
+    @media($phone){
+        font-size: 35px;
+    }
+}
+
+p {
+    margin-top: 40px;
+    line-height: 1.8;
+
+    @media($phone){
+        margin-top: 10px;
+        font-size: 14px;
+        
+    }
+}

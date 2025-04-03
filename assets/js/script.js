@@ -85,7 +85,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 const formData = new FormData(form);
                 const json = JSON.stringify(Object.fromEntries(formData.entries()));
 
-                postData('http://localhost:3001/requests', json)
+                postData('http://localhost:3000/requests', json)
                     .then(data => {
                         console.log(data);
                         showThanksModal(message.success);
@@ -119,7 +119,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 thanksModal.remove();
                 pervModalDialog.style.display = 'block';
                 hideModal(modal);
-            }, 8000);
+            }, 4000);
         }
 
         bindpostData(form);
